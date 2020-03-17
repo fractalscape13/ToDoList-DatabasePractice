@@ -3,10 +3,12 @@
 }
 
 <h1>Add a new item to @Model.Name</h1>
+<div class="box">
+  <form action="/categories/@Model.Id/items" method="post">
+    <input id="categoryId" name="categoryId" type="hidden" value="@Model.Id">
+    <label for="itemDescription">Item Description</label>
+    <input id="itemDescription" name="itemDescription" type="text">
+    <button type='submit'>Add item</button>
+  </form>
 
-<form action="/categories/@Model.Id/items" method="post">
-  <input id="categoryId" name="categoryId" type="hidden" value="@Model.Id">
-  <label for="itemDescription">Item Description</label>
-  <input id="itemDescription" name="itemDescription" type="text">
-  <button type='submit'>Add item</button>
-</form>
+</div>
